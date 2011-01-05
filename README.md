@@ -1,1 +1,1 @@
-Parsec documentation project
+Parsec documentation project.
