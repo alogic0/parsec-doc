@@ -11,16 +11,22 @@ Then, full source of the package is lexified (into $package.tokens) and all toke
 
 Then we compute stats:
 
-combined-import-stats.txt: how many times function was imported, parsec2 and parsec3 combined
-parsec2-import-stats.txt: ditto, for parsec2 only
-parsec3-import-stats.txt: ditto, for parsec3 only
+  combined-import-stats.txt: how many times function was imported, parsec2 and parsec3 combined
+  parsec2-import-stats.txt: ditto, for parsec2 only
+  parsec3-import-stats.txt: ditto, for parsec3 only
 
-combined-tokens-stats.txt: popularity of parsec-related tokens, parsec2 and parsec3 combined
-parsec2-tokens-stats.txt: same, parsec2 only
-parsec2-tokens-stats.txt: same, parsec3 only
+  combined-tokens-stats.txt: popularity of parsec-related tokens, parsec2 and parsec3 combined
+  parsec2-tokens-stats.txt: same, parsec2 only
+  parsec2-tokens-stats.txt: same, parsec3 only
 
-parsec2-packages.lst: list of packages that use parsec2
-parsec3-packages.lst: ditto, for parsec3
+  parsec2-packages.lst: list of packages that use parsec2
+  parsec3-packages.lst: ditto, for parsec3
+
+Then, we could find out which combinators account for 80% of the usage count:
+
+  combined-top-80-percent.txt
+  parsec2-top-80-percent.txt
+  parsec3-top-80-percent.txt
 
 Statistics in the repo was computed on 229 packages, others refused to build and I wasn't looking too hard into why.
 
