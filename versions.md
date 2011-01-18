@@ -33,9 +33,34 @@ several language extensions are required.
 TODO: test Parsec 2 with different compilers
 
 #### Haskell Platform ####
+The [Haskell Platform][HP] is a set of blessed libraries and tools. As of
+2010.2.0.0 release of the Platform, the Parsec 2 is included in the set of
+packages, while Parsec 3 is not.
+
+This means that users installing Haskell Platform get Parsec 2 for free, while
+Parsec 3 has to be installed manually (e.g. using `cabal-install`).
+
+On the other hand, most probably Parsec 3 will get into the Haskell Platform
+sooner or later. Regarding Parsec 2, it also is not going to disappear from the
+Platform in the nearest future.
 
 #### Performance ####
+Originally (i.e. as of 3.0 version) Parsec 3 was considerably slower than
+Parsec 2. However, [work on improving Parsec 3 performance][cps] has been  done,
+and as of version 3.1 Parsec 3 is only slightly slower than Parsec 2
+(benchmarks: [1][bench1], [2][bench2]).
+
 
 ### Compatibility layer ###
+It has been possible to "reimplement" all of the Parsec 2 API in Parsec 3. This
+compatibility layer is provided by the Parsec 3 package under the module hierarchy
+`Text.ParserCombinators.Parsec` (the same hierarchy which is used by Parsec 2),
+while the new Parsec 3 API is available under the `Text.Parsec` hierarchy.
+
+This means that you can use Parsec 3 as a drop-in replacement for Parsec 2.
 
 [TODO]: https://github.com/feuerbach/parsec-doc/wiki
+[HP]: http://hackage.haskell.org/platform/
+[cps]: http://panicsonic.blogspot.com/2009/12/adventures-in-parsec.html
+[bench1]: http://www.haskell.org/pipermail/haskell-cafe/2009-December/070196.html
+[bench2]: http://www.mail-archive.com/haskell-cafe@haskell.org/msg79296.html
