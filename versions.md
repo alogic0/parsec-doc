@@ -30,7 +30,12 @@ parsing), exposed through the modules `Text.Parsec.ByteString` and
 Advanced features provided by Parsec 3 do not come for free: to implement them
 several language extensions are required.
 
-TODO: test Parsec 2 with different compilers
+Neither of the two versions is Haskell-2010 (i.e. both use extensions), but
+Parsec 2 uses less extensions than Parsec 3, so chances that any given compiler
+can compile Parsec 2 are higher than those for Parsec 3.
+
+By this time both versions work with GHC, while Parsec 2 is also [reported][jhc] to
+build with JHC and is included as one of the JHC's standard libraries.
 
 #### Haskell Platform ####
 The [Haskell Platform][HP] is a set of blessed libraries and tools. As of
@@ -64,3 +69,4 @@ This means that you can use Parsec 3 as a drop-in replacement for Parsec 2.
 [cps]: http://panicsonic.blogspot.com/2009/12/adventures-in-parsec.html
 [bench1]: http://www.haskell.org/pipermail/haskell-cafe/2009-December/070196.html
 [bench2]: http://www.mail-archive.com/haskell-cafe@haskell.org/msg79296.html
+[jhc]: http://www.haskell.org/pipermail/haskell/2011-January/022532.html
